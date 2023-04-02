@@ -1,10 +1,10 @@
 {
-  "name": "Documentation Starter Kit",
+  "name": "Libraria API Kit",
   "logo": {
     "dark": "/logo/dark.png",
     "light": "/logo/light.png"
   },
-  "favicon": "/favicon.ico",
+  "favicon": "/favicon.png",
   "colors": {
     "primary": "#0069ED",
     "light": "#4D9CFF",
@@ -55,9 +55,7 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/libraria"
   },
   "api": {
     "auth": {
