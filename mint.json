@@ -1,8 +1,8 @@
 {
   "name": "Libraria API Kit",
   "logo": {
-    "dark": "/logo/dark.png",
-    "light": "/logo/light.png"
+    "dark": "/logo/logo-dark.png",
+    "light": "/logo/logo-light.png"
   },
   "favicon": "/favicon.png",
   "colors": {

@@ -43,6 +43,7 @@ paths:
           application/json:
             schema:
               type: object
+              required: ["urls"]
               properties:
                 urls:
                   type: array
@@ -93,12 +94,18 @@ paths:
               properties:
                 query:
                   type: string
+                  description: "The message you want to send to your assistant"
                   example: "What is the capital of France?"
                 conversation_id:
                   type: string
                   nullable: true
                   description: "Optional. Use this for a continuation of the conversation. You will receive a conversation id on the first query you send."
                   example: "optional-unique-id"
+              required: ['query']
+            examples:
+                capitalOfFrance:
+                  summary: "The message you want to send to"
+                  value: { "query": "What is the capital of France?"}
       responses:
         '200':
           description: Query response
