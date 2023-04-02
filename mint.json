@@ -1,5 +1,4 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
   "name": "Documentation Starter Kit",
   "logo": {
     "dark": "/logo/dark.png",
@@ -14,12 +13,12 @@
   "topbarLinks": [
     {
       "name": "Documentation",
-      "url": "https://mintlify.com/docs"
+      "url": "https://libraria.dev/api-reference/authentication"
     }
   ],
   "topbarCtaButton": {
-    "name": "Get Started",
-    "url": "https://github.com/mintlify/starter"
+    "name": "Sign Up to Libraria",
+    "url": "https://libraria.dev"
   },
   "anchors": [
     {
@@ -30,30 +29,28 @@
     {
       "name": "Changelog",
       "icon": "list",
-      "url": "https://mintlify.com"
+      "url": "https://libraria.dev/feature-updates"
     },
     {
       "name": "Community",
       "icon": "discord",
-      "url": "https://mintlify.com/community"
+      "url": "https://discord.gg/Q5E5UeyaE9"
     }
   ],
   "navigation": [
     {
       "group": "Home",
-      "pages": ["introduction", "features"]
+      "pages": ["introduction"]
     },
     {
       "group": "API Documentation",
       "pages": ["api-reference/authentication"]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Libraria API",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "api-reference/library/create-document",
+        "api-reference/library/create-query"
       ]
     }
   ],
@@ -61,5 +58,10 @@
     "twitter": "https://twitter.com/mintlify",
     "github": "https://github.com/mintlify",
     "linkedin": "https://www.linkedin.com/company/mintsearch"
+  },
+  "api": {
+    "auth": {
+      "method": "bearer"
+    }
   }
 }

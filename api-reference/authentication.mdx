@@ -1,22 +1,14 @@
 ---
 title: "Authentication"
-description: "Example overview page before API endpoints"
+description: "Authentication for Libraria"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et eros iaculis tortor dapibus cursus. Curabitur quis sapien nec tortor dictum gravida.
+The Libraria API uses API keys for authentication. Visit your Team Settings or Personal Settings page to retrieve the API key you'll use in your requests.
+
+Remember that your API key is a secret! Do not share it with others or expose it in any client-side code (browsers, apps). Production requests must be routed through your own backend server where your API key can be securely loaded from an environment variable or key management service.
+
+All API requests should include your API key in an HTTP header as follows:
 
 ```bash
-'Authorization': 'Token <team_token>'
+'Authorization': 'Bearer <api_key>'
 ```
-
-## API Tokens
-
-Nullam convallis mauris at nunc consectetur, ac imperdiet leo rutrum. Maecenas cursus purus a pellentesque blandit. Pellentesque vitae lacinia libero, non mollis metus.
-
-Nam id ullamcorper urna, at rutrum enim. [Maecenas vulputate](/introduction) vehicula libero, vitae sodales augue pretium nec. Quisque a magna tempor, semper risus vel, fermentum nunc. Pellentesque fermentum interdum ex, eu convallis massa blandit sed. Aliquam bibendum ipsum vel laoreet auctor.
-
-### Permissions
-
-Etiam lobortis ut odio ut fermentum. Nunc odio velit, sollicitudin at consectetur id, tristique eget turpis. Aliquam at risus vitae dolor sodales venenatis. In hac habitasse platea dictumst.
-
-Aenean consequat diam eget mollis fermentum. [Quisque eu malesuada](/introduction) felis, non dignissim libero.
