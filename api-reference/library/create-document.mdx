@@ -1,7 +1,7 @@
 ---
 title: "Add Document"
-api: "POST /library/{library_id}/document"
-description: "This endpoint adds a new document"
+description: "Add a new document to your library via scraping or raw text"
+api: "POST https://api.libraria.dev/library/{library_id}/document"
 ---
 
 ### Parameters
@@ -43,5 +43,15 @@ The url of the image snippet you want to add in responses
 
 <ResponseField name="message" type="string">
 </ResponseField>
+
+
+<ResponseExample>
+  ```json Example Response
+  {
+    "status": "queued",
+    "message": "URLs added to queue"
+  }
+  ```
+</ResponseExample>
 
 
