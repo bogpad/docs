@@ -1,5 +1,47 @@
 ---
 title: "Add Document"
-openapi: "POST /library/{library_id}/document"
+api: "POST /library/{library_id}/document"
 description: "This endpoint adds a new document"
 ---
+
+### Parameters
+<ParamField path="library_id" type="string" required={true}>
+  The ID of the library to add the document to
+</ParamField>
+### Body
+You may choose one of:
+1. A set of URLs to scrape
+2. A raw text document
+
+If you add both a set of URLs  and a raw text document, an error will be returned.
+
+**Scrape URLs**
+<ParamField body="urls" type="array">
+  The list of URLs to scrape from. You may include up to 20 URLs at a time
+</ParamField>
+<Divider />
+**Raw text**
+<ParamField body="text" type="string">
+The text body of the document you want to add
+</ParamField>
+<ParamField body="title" type="string" optional={true}>
+The text body of the document you want to add
+</ParamField>
+<ParamField body="sourceUrl" type="string"  optional={true}>
+The source of the document. Used for the 'Learn More' snippet
+</ParamField>
+<ParamField body="imageSnippet" type="string"  optional={true}>
+The url of the image snippet you want to add in responses
+</ParamField>
+
+
+### Response
+
+<ResponseField name="status" type="string">
+  One of queued, success, failed
+</ResponseField>
+
+<ResponseField name="message" type="string">
+</ResponseField>
+
+

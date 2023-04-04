@@ -42,33 +42,66 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              required: ["urls"]
-              properties:
-                urls:
-                  type: array
-                  description: "The list of URLs to scrape from. You may include up to 20 URLs at a time"
-                  items:
-                    type: string
-                  example:
-                    - "https://example.com/article1"
-                    - "https://example.com/article2"
+              oneOf:
+                - type: object
+                  required: ["urls"]
+                  properties:
+                    urls:
+                      type: array
+                      description: "The list of URLs to scrape from. You may include up to 20 URLs at a time"
+                      items:
+                        type: string
+                      example:
+                        - "https://example.com/article1"
+                        - "https://example.com/article2"
+                - type: object
+                  required: ["text"]
+                  properties:
+                    text:
+                      type: string
+                      description: "The text body of the document you want to add"
+                      example:
+                        "The capital of France is Paris"
+                    title:
+                      type: string
+                      description: "The title of the document you want to add"
+                      example:
+                        "What is France's capital?"
+                    sourceUrl:
+                      type: string
+                      description: "The source of the document. Used for the 'Learn More' snippet"
+                      example:
+                        "https://en.wikipedia.org/wiki/France"
+                    imageSnippetUrl:
+                      type: string
+                      description: "The url of the image snippet you want to add in responses"
+                      example:
+                        "https://upload.wikimedia.org/wikipedia/commons/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"
       responses:
         '200':
           description: URLs added to the library
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    description: "One of queued, success, failed"
-                    type: string
-                    example: "success"
-                  message:
-                    type: string
-                    example: "URLs added to the library"
-
+                oneOf: 
+                  - type: object
+                    properties:
+                      status:
+                        description: "One of queued, success, failed"
+                        type: string
+                        example: "success"
+                      message:
+                        type: string
+                        example: "URLs added to the library"
+                  - type: object
+                    properties:
+                      status:
+                        description: "Whether document was successfully added to your library"
+                        type: string
+                        example: "success"
+                      message:
+                        type: string
+                        example: "Successfully added document."
   /library/{library_id}/query:
     post:
       tags:
