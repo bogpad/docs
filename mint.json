@@ -43,6 +43,10 @@
       "pages": ["introduction"]
     },
     {
+      "group": "Assistants",
+      "pages": ["assistants/prompts"]
+    },
+    {
       "group": "API Documentation",
       "pages": ["api-reference/authentication"]
     },
