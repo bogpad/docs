@@ -43,6 +43,10 @@
       "pages": ["introduction"]
     },
     {
+      "group": "Libraries",
+      "pages": ["libraries/overview"]
+    },
+    {
       "group": "Assistants",
       "pages": ["assistants/prompts"]
     },
