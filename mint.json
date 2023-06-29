@@ -57,6 +57,7 @@
     {
       "group": "Libraria API",
       "pages": [
+        "api-reference/library/get-document",
         "api-reference/library/create-document",
         "api-reference/library/delete-document",
         "api-reference/library/create-query"
