@@ -10,14 +10,14 @@ api: "POST https://api.libraria.dev/library/{library_id}/document"
 </ParamField>
 ### Body
 You may choose one of:
-1. A set of URLs to scrape
+1. A URL to scrape
 2. A raw text document
 
-If you add both a set of URLs  and a raw text document, an error will be returned.
+If you add both a url and a raw text document, an error will be returned.
 
-**Scrape URLs**
-<ParamField body="urls" type="array">
-  The list of URLs to scrape from. You may include up to 20 URLs at a time
+**Scrape URL**
+<ParamField body="url" type="string">
+The url to scrape from
 </ParamField>
 <Divider />
 **Raw text**
