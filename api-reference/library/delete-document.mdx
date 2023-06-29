@@ -1,0 +1,37 @@
+---
+title: "Delete Document"
+description: "Delete a document from a library"
+api: "DELETE https://api.libraria.dev/library/{library_id}/document/{document_id}"
+---
+
+### Parameters
+<ParamField path="library_id" type="string" required={true}>
+  The ID of the library to add the document to
+</ParamField>
+<ParamField path="document_id" type="string" required={true}>
+  The ID of the document to delete
+</ParamField>
+
+### Response
+<ResponseField name="id" type="string">
+  The ID of the document that was deleted
+</ResponseField>
+<ResponseField name="object" type="string">
+  The type of object deleted
+</ResponseField>
+<ResponseField name="deleted" type="boolean">
+  Whether or not the document was deleted
+</ResponseField>
+
+
+<ResponseExample>
+  ```json Example Response
+  {
+    "id": "doc_1",
+    "object": "document",
+    "deleted": true
+  }
+  ```
+</ResponseExample>
+
+
