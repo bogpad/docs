@@ -22,6 +22,9 @@ api: "GET https://api.libraria.dev/library/{library_id}/document/{document_id}"
 <ResponseField name="sourceUrl" type="string">
   The URL of the document's source
 </ResponseField>
+<ResponseField name="scrapeStatus" type="string" optional={true}>
+  one of queued, running, success, or failed
+</ResponseField>
 <ResponseExample>
   ```json Example Response
   {
